@@ -252,7 +252,7 @@ def union(PARAMS):
     return numpy_union
 
 def multi_process(PARAMS):   #identify outlets location
-    with ProcessPoolExecutor(max_workers = 1) as pool:
+    with ProcessPoolExecutor(max_workers = 5) as pool:
         result= pool.map(union,PARAMS)
     return result
 
