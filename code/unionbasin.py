@@ -272,6 +272,8 @@ if __name__ == '__main__':
             currentbasinid = unit[1] - 1
             downstreamtileid = unit[2]
             downstreambasinid = unit[3] - 1
+            if downstreambasinid == -10000:
+                continue
             outlets[currenttileid][currentbasinid].downstreamtileid = downstreamtileid
             outlets[currenttileid][currentbasinid].downstreambasinid = downstreambasinid + 1
             outlets[downstreamtileid][downstreambasinid].upstreaminfo.append([currenttileid,currentbasinid + 1])
