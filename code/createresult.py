@@ -9,7 +9,7 @@ row = 9     #the row grid cells number of the complete flow direction matrix
 col = 9     #the col grid cells number of the complete flow direction matrix
 
 def multi_process(PARAMS):   #identify outlets location
-    with ProcessPoolExecutor(max_workers = 1) as pool:
+    with ProcessPoolExecutor(max_workers = 5) as pool:
         pool.map(createraster,PARAMS)
     return 0
 
